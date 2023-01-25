@@ -1,0 +1,6 @@
+- Para las apuestas de futuros de múltiples vías, todos los eventos son TODO ACCIÓN, sin reembolsos.
+- Si un atleta / equipo en particular tiene un precio de sí / no (bidireccional) para ganar la medalla de oro, entonces ese atleta / equipo debe comenzar la competencia para la acción.
+- Para las apuestas Match-Up entre dos atletas / 2 países en cualquier evento, ambos atletas / países deben comenzar el evento para la acción.
+- Para más / menos en el total de medallas de un país dentro de un deporte, el total es para las competiciones masculinas y femeninas dentro de esa área – Ejemplo: si EE. UU. - - - Gana 10 medallas en atletismo masculino y 9 en atletismo femenino, el total de medallas ganadas por EE. UU. tiene 19 años en Atletismo.
+- Los eventos son oficiales después de la ceremonia de entrega de medallas original. - Cualquier cambio posterior a esos resultados no cuenta.
+- Para los accesorios de atletas individuales, el competidor debe comenzar el primer evento en el que están programados para participar para la acción.

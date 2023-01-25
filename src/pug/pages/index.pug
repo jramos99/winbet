@@ -1,0 +1,12 @@
+extends ../config/template
+append config
+	-currentPage		= "inicio"
+	-siteName			= 'WinBet'
+	-content			= 'content'
+	-pageDescription	= 'This website contains a collection of projects developed by Enrique Estrada using a Gulp boilerplate developed by him'
+block main-header
+block main-container
+	include ../components/tns-single
+	include ../components/grid-games
+block main-footer
+block scripts

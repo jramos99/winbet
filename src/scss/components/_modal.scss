@@ -1,0 +1,83 @@
+.modal {
+	align-items: center;
+	box-shadow: 0px 2px 5px 4px rgba(0, 0, 0, 0.44);
+	background-color: var(--color-background);
+	width: 300px;
+	border-radius: 8px;
+	padding: 24px;
+	z-index: 10;
+	margin: auto;
+	display: none;
+	position: absolute;
+	
+	@include from(l) {
+		margin-right: 5rem;
+	}
+
+	&__h3 {
+		color: var(--color-body);
+		text-align: center;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+
+	&__form--label {
+		color: var(--color-body);
+		font-size: var(--small-font-size);
+		margin-bottom: 1rem;
+		text-transform: capitalize;
+	}
+
+	&__form--input {
+		border: 1px solid var(--color-border);
+		border-radius: 8px;
+		padding: 16px;
+		background-color: var(--color-hover);
+		width: 100%;
+		color: var(--color-body);
+
+		&::placeholder {
+			color: var(--color-border);
+		}
+
+	}
+
+	&__form--button {
+		width: 100%;
+		padding: 12px;
+
+	}
+
+	&__form--signup {
+		display: flex;
+		flex-direction: column;
+		margin-top: 16px;
+		padding: 16px 0;
+		text-align: center;
+		width: 100%;
+		font-weight: bold;
+
+		p {
+			color: var(--color-body);
+			margin-bottom: 0;
+		}
+
+		a {
+			color: var(--color-first-opacy);
+
+			&:hover {
+				color: var(--color-first);
+			}
+		}
+
+	}
+
+	&__form--anchor {
+		color: var(--color-first-opacy);
+		text-align: center;
+	}
+}

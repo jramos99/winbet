@@ -1,0 +1,11 @@
+mixin pushSeeMore(img, alt, title, textLink, href)
+	div(class="grid-cardsGames__card")
+		img(src=img, alt=alt, class="grid-cardsGames__img")
+		div(class="grid-cardsGames__overlay")
+			div(class="grid-cardsGames__card--content")
+				h3(class="grid-cardsGames__card--content-h3")= title 
+				a(href=href class="grid-cardsGames__card--content-a btn btn__form")= textLink
+
+-for(var i = 0; i < fixedOdds.length; i++)
+	-var item = fixedOdds[i]
+	+pushSeeMore(item.img, item.alt, item.title, item.textLink, item.href)

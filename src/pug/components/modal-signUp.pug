@@ -1,0 +1,62 @@
+mixin option(currency)
+	option= currency
+
+mixin item(contry)
+	option(class="signUp__form--option")= contry
+
+div(class="background-color")
+div(class="ed-container modal__container")
+	div(class="signUp")
+		a(href="index.html")
+			img(src='assets/img/logo.png', alt="")
+		h3(class="signUp__h3") Crea tu cuenta
+		form(action="" class="signUp__form") 
+			div(class="ed-grid s-grid-1") 
+				select(name="" class="signUp__form--select") 
+					-for(var i = 0; i < currencies.length ; i++)
+						-var currency  = currencies[i]
+						+option(currency.currency)
+
+			div(class="signUp__form--container ed-grid s-grid-1 lg-grid-2") 
+				label(for="text" class="signUp__form--label") Nombre
+					input(type="email" name="email" class="signUp__form--input" placeholder="Ingresa tu nombre")
+				
+				label(for="text" class="signUp__form--label") Apellido
+					input(type="email" name="email" class="signUp__form--input" placeholder="Ingresa tu apellido")
+			
+				label(for="email" class="signUp__form--label") correo electrónico
+					input(type="email" name="email" class="signUp__form--input" placeholder="Ingresa tu correo")
+
+				label(for="email" class="signUp__form--label") Confirmar correo electrónico
+					input(type="email" name="email" class="signUp__form--input" placeholder="Confirma tu correo")
+			
+				label(for="password" class="signUp__form--label") Contraseña 
+					input(type="password" name="password" class="signUp__form--input" placeholder="Ingresa tu contraseña")
+				
+				label(for="password" class="signUp__form--label") Confirmar Contraseña 
+					input(type="number" name="password" class="signUp__form--input" placeholder="Comfirma tu contraseña")
+			
+			div(class="ed-grid s-grid-1")
+				label(for="password" class="signUp__form--label") Cedula o identificacion del gobierno 
+					input(type="number" name="password" class="signUp__form--input" placeholder="Ingresa tu identificacion")
+				
+				select(name="" class="signUp__form--select") 
+					-for(var i = 0; i < contries.length ; i++)
+						-var contry  = contries[i]
+						+item(contry.contry)
+				
+				label(for="password" class="signUp__form--label") Fecha de nacimiento 
+					input(type="date" name="password" class="signUp__form--input" placeholder="Ingresa tu fecha de nacimiento")
+				
+				label(for="password" class="signUp__form--label") Codigo promocional 
+					input(type="text" name="password" class="signUp__form--input" placeholder="Ingresa el codigo promocional")
+				
+				label(for="checkbox")
+					input(type="checkbox" name="checkbox" id="cbox1" value="first_checkbox") 
+					a(href="./" class="signUp__form--anchor")  Leer las reglas
+			
+			button(type="submit" class="signUp__form--button btn btn__primary") Resgistrarme
+			
+			div(class="signUp__form--signup") 
+				p ¿Ya tienes cuenta? 
+					a(href="./")  Iniciar Sesión

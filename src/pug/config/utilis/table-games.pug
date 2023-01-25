@@ -1,0 +1,13 @@
+mixin pushItem(img, alt, title, textLink, href)
+	div(class="grid-cardsGames__card")
+		img(src=img, alt=alt, class="grid-cardsGames__img")
+		div(class="grid-cardsGames__overlay")
+			div(class="grid-cardsGames__card--content")
+				h3(class="grid-cardsGames__card--content-h3")= title 
+				a(href=href class="grid-cardsGames__card--content-a btn btn__form")= textLink
+
+-for(var i = 0; i < tableGames.length ; i++)
+	-var item = tableGames[i].lobbies
+	-for(var j = 0; j < item.length ; j++)
+		-var items = item[j]
+		+pushItem(items.img, items.alt, items.title, items.textLink, items.href)

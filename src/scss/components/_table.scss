@@ -1,0 +1,26 @@
+.sport-rules-container {
+	padding: 20px;
+	background-color: var(--color-background);
+	// box-shadow: $box-shadow-first;
+	border-radius: 15px;
+	margin-bottom: 40px;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.sport-rules__table {
+	border-collapse: collapse;
+}
+
+.sport-rules__table--td1 {
+	width: 20%;
+	padding: 5px;
+	border: 1px solid #f2f2f2;
+	font-weight: bold;
+}
+
+.sport-rules__table--td2 {
+	border: 1px solid #f2f2f2;
+	padding: 5px;
+}

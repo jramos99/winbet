@@ -1,0 +1,128 @@
+#tnsCarousell {
+	display: flex;
+	gap: 1rem;
+}
+
+// .tns-controls{
+// 	button[data-controls=prev] {
+// 		background-color: --color-bodyThird;
+// 		padding: 0.5rem 0.8rem;	
+// 	}
+// }
+
+.container-icon-close{
+	border-radius: 6px 6px 0px 0px;
+	z-index: 2;
+	color: var(--color-bodyThird);
+	// padding-bottom: 1rem;
+}
+
+.container-accordion {
+	max-width: 1280px;
+	width: 90%;
+	// background-color: var(--color-background);
+}
+.accordion-container {
+
+	&__btn-acc {
+		border: none;
+		color: var(--color-bodyThird);
+		padding: 5px;
+		padding-left: 16px;
+		width: 100%;
+		text-align: left;
+		outline: none;
+		font-size: 15px;
+		transition: 0.4s;
+		
+		@include from(l) {
+			padding-left: 56px;
+
+		}
+
+		.container-ts{
+			margin: 0 0 0.3rem 1rem ;
+			
+			h4{
+				margin: 0 ;
+				padding-left: 56px;
+			}
+			
+			h5{
+				margin: 0 ;
+				color: #9CA3AF;
+			}
+		}
+		
+	}
+
+	// .active {
+	// 	background-color: rgb(186, 24, 24);
+	// }
+
+	&__panel {
+		border-radius: 0px 0px 12px 12px;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.219), 0 6px 6pxrgba(0, 0, 0, 0.219);
+		color: black;
+		padding: 0 18px;
+		background-color:  var(--color-background);
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease-out;
+		margin-bottom: 3rem;
+
+		ul {
+			padding: 0;
+		}
+		li {
+			list-style: none;
+		}
+		
+		.active:after {
+			content: "\2796";
+		}
+	}
+}
+
+.container-icon-close{
+	display: none;
+	color: #fffef3;
+	background-color: var(--color-background);
+	border-bottom: 1px solid var(--color-first);
+	.close-icon {
+		display: flex;
+		justify-content: right;
+		
+		.close-btn{
+			// filter: invert(1);
+			padding: 0.4rem 1rem 0rem 1rem;
+			transition: .3s;
+			transform: scale(1);
+		}
+		.close-btn:hover{
+			transform: scale(1.1);
+		}
+		svg{
+			cursor: pointer;
+			width: 28px;
+		}
+		
+	}
+}
+
+.tns-select{
+	span{
+		img{
+			background: #eee;
+			border: 4px solid;
+			// border-image-source: linear-gradient(to right, #8ff74a, #ff4c4c);
+			border: 1px solid var(--color-third);
+			border-image-slice: 30;
+			line-height: 2;
+			transform: scale(1);
+			border-radius: 1rem;
+			box-shadow: 0px 0px 9px 1px rgba(241, 233, 64, 0.92);
+		}
+		
+	}
+}

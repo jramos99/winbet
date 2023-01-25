@@ -1,0 +1,171 @@
+.top-nav{
+	background    	: var(--color-background);
+	position      	: fixed;
+	top           	: 0;
+	width         	: 100%;
+	left          	: 0;
+	display 		: flex;
+	justify-content : center;
+	z-index: 10;
+
+
+	&__container {
+		align-items: center;
+		background-color: var(--color-background);
+		display: flex;
+		justify-content: space-between;
+		height        	: var(--header-height);
+		max-width: 1280px;
+		width: 100%;
+		padding: 16px 15px;
+	}
+
+	&__link{
+		align-self: center;
+	}
+
+	&__logo{
+		height: 2.5rem;
+		max-width: 200px;
+		min-width: 120px;
+		width: 100%;
+		display: block;
+		
+
+		@include from(l){
+			height: 3rem;
+		}
+	}
+
+	&__btns--container{
+		display: flex;
+		height: var(--header-height);
+		align-items: center;
+		padding: 1rem 0;
+		gap: 1rem;
+
+	}
+	
+	&__btns{
+		@include fromTo(s,l){
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			gap: 12px;
+			margin: 16px 0 16px 0;
+		}
+	}
+
+
+	&__menu{
+		position 		: fixed;
+		padding 		: 4rem 16px;
+		height 			: 100vh;
+		width 			: 260px;
+		background 		: var(--color-first);
+		transition 		: left .5s;
+		overflow-y 		: auto;
+		top 			: 0;
+		left 			: -260px;
+		opacity: 0.95;
+		
+		&.show-top-nav {
+			left: 0;
+		}
+		
+		@include from(l){
+			align-self: center;
+			margin: 0;
+			width: 300px;
+			left: -300px;		
+		}
+	}
+	
+	&__li{
+		align-items: flex-start;
+		color: var(--color-background);
+		display: flex;
+		flex-direction: column;
+		border-bottom: 0.0025rem solid var(--color-background);
+		padding: 18px 0;
+		margin: 0;
+		margin: 0 1em;
+		list-style-type: none;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
+			a{
+				color: var(--color-body);
+			}
+		}
+	}
+
+	&__anchor {
+		color: var(--color-background);
+		font-weight: bolder;
+		
+		@include fromTo(s,l){
+			display: block;
+			
+		}
+	}
+
+	&__ul {
+		list-style: none;
+		color: var(--color-body);
+		font-size: 18px;	
+	}
+	
+	&__connect--container {
+		margin-top: 84px;
+	}
+
+	&__connect--list {
+		display: flex;
+		gap: 20px;
+		padding-left: 18px;
+		justify-content: flex-start;
+
+		img {
+			width: 24px;
+			
+			@include from(l) {
+				height: 36px;
+				width: 36px;
+			}
+		}
+	}
+
+	&__connect--li {
+		list-style: none;
+		color: var(--color-body);
+		font-size: 18px;
+		margin: 0;	
+	}
+​
+	&__mb-iconMenu {
+		position: relative;
+		align-self: center;
+		top: 3px;
+		padding: 0;
+		span{
+			&.hamburger-inner{
+				background: var(--color-body);
+				&::after{}
+				&::before{}
+				&::after, &::before{
+				background: var(--color-body);
+				}
+			}
+		}
+
+		&:focus {
+			outline: 0 !important;
+			-moz-outline-style: none !important;
+			outline: thin dotted;
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px;
+		}
+	}
+} 

@@ -1,0 +1,22 @@
+section(class="rules")
+	div(class='accordion-container ed-grid')
+		.accordion
+			.accordion__header.accordion__outline#heading1 Reglas de la casa
+				span.accordion__span
+			.accordion__content#content1
+				include:markdown-it(html) ../md/houseRules.md
+
+			.accordion__header.accordion__outline#heading2 Reglas de deportes
+				span.accordion__span
+			.accordion__content#content2 
+				include:markdown-it(html) ../md/sportRules.md
+				include table
+				include ../components/dropdown
+			.accordion__header.accordion__outline#heading3 Reglas de casino
+				span.accordion__span
+			.accordion__content#content3 
+				include:markdown-it(html) ../md/casinoRules.md
+	div.background-img
+
+
+

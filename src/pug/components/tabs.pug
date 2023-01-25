@@ -1,0 +1,26 @@
+section(class="section-apuestas")
+    div(class='ed-container')
+    div(class='ed-item')
+        div(class='tabs-container')
+            ul(class='tabs-container__tabs' id='tabs')
+                li(class='tabs-container__tab is-active') deposits
+                li(class='tabs-container__tab') withdraw
+            div(class='tabs-container__panels')
+                div(class='ed-grid s-grid-1 m-grid-2 l-grid-3 tabs-container__panel is-active')
+                    -for(var i = 0; i < bankingDeposit.length ; i++)
+                        div(class='tabs-container__item')
+                            div(class="tabs-container__contentImg")
+                                img(src=bankingDeposit[i].img, alt=bankingDeposit[i].alt class="tabs-container__img")
+                            a(class="btn btn__banca" href=bankingDeposit[i].link)= bankingDeposit[i].textLink
+                div(class='ed-grid s-grid-1 m-grid-2 tabs-container__panel')
+                    -for(var i = 0; i < bankingWithdraw.length ; i++)
+                        div(class='tabs-container__item')
+                            div(class="tabs-container__contentImg")
+                                img(src=bankingWithdraw[i].img, alt=bankingWithdraw[i].alt class="tabs-container__img")
+                            a(class="btn btn__banca" href=bankingWithdraw[i].link)= bankingWithdraw[i].textLink
+    div(class="ed-item tabs-content")
+        h3(class="tabs-content__h3") Banking Conditions:
+        ul(class="tabs-content__ul")
+            li(class="tabs-content__li") First credit/debit card deposit has 21 day hold.
+            li(class="tabs-content__li") Any Bitcoin deposit under $50 has a $2 transaction fee.
+            li(class="tabs-content__li") Maximum $1000 per sender per month. Maximum $500 per transaction.

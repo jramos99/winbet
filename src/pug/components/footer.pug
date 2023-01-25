@@ -1,0 +1,18 @@
+mixin column1(item, link)
+	li(class="main-footer__li"): a(href=link  class='foot-icon')=item
+
+mixin column3(item, link)
+	li(class="main-footer__li"): a(href=link class='foot-icon')=item
+
+div(class="main-footer__top")
+	a(class='main-footer__top--logo' href='/')
+		img(src='assets/img/WINBET-LOGO.png', alt='winbet logo' class="top-nav__logo")
+div(class='ed-grid m-grid-2 row-gap main-footer__content')
+	ul(class="main-footer__ul").data-list
+		-for(var i = 0; i < column1.length ; i++)
+			-var item = column1[i]
+			+column1(item.item, item.link)
+	ul(class="main-footer__ul").data-list
+		-for(var i = 0; i < column3.length ; i++)
+			-var item = column3[i]
+			+column3(item.item, item.link)

@@ -1,0 +1,16 @@
+section(class="casino-games")
+	h2(class="casino-games__h2") Casino
+	div(class="casino-games__layout")
+		div(class="casino-games__layout--col1")
+			div(class="casino-games__layout--grid ed-grid s-grid-2 m-grid-3 l-grid-4")
+				-for(var i = 0; i < casinos.length ; i++)
+					-var casino = casinos[i]
+					a(class="casino-games__layout--card" href=casino.link)
+						img(class="casino-games__layout--card-img", src=casino.img, alt=casino.alt)
+						h3(class="casino-games__layout--h3")= casino.title
+		div(class="casino-games__layout--col2") 
+			h3(class="casino-games__layout--title")  Proveedores
+			div(class="ed-grid s-grid-2 m-grid-4 l-grid-2 casino-games__layout--imgs")
+				-for(var i = 0; i < providers.length ; i++)
+					-var provider = providers[i]
+					img(src=provider.img, alt=provider.alt)

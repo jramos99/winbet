@@ -1,0 +1,137 @@
+.box-color{
+	background: #cccccc;
+	color: #666666;
+	border: 1px solid white;
+	padding: 5px 15px;
+}
+
+.section-divider{
+	padding-bottom: 30px;
+}
+img {
+	border: 0;
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+
+.sidebar-first {
+  margin-bottom : 1em;
+}
+
+.no-marging{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.bottom-space{
+	margin-bottom: 1em;
+}
+.foot-icon{
+	margin-left: 5px;
+}
+// posiciono un componente cerca del elemento padre
+.modal__container {
+	max-width: 1440px;
+	justify-content: flex-end;
+}
+
+// overlay para cuando se click al btn de ingresar
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	background: rgba(36, 36, 64, 0.75);
+	opacity: 0.9;
+	z-index: 6;
+	display: none;
+}
+
+// estilo para usar con js
+.expand {
+	display: block;
+}
+
+
+// clases para cambar la equis en la hamnurguesa
+.white {
+	background: white;
+}
+
+.red{
+	background: var(--color-first);
+	opacity: 0.95;
+}
+.red::after{
+	background: var(--color-first);
+	opacity: 0.95;
+}
+
+//hack para posicionar un texto dentro de un box
+ .relative {
+	position: relative;
+ }
+
+
+ //hover en bonuses
+
+.card1 {
+	@include from(l) {
+		&:hover {
+			background-image: url(../../assets/img/1_1-bonuses.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}	
+}
+
+.card2 {
+	@include from(l) {
+		&:hover {
+			background-image: url(../../assets/img/2_2-bonuses.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}
+
+.card3 {
+	@include from(l) {
+		&:hover {
+			background-image: url(../../assets/img/3_3-bonuses.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}	
+}
+
+.card4 {
+	@include from(l) {
+		&:hover {
+			background-image: url(../../assets/img/4_4-bonuses.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}
+
+//display
+
+.display {
+	display: none;
+
+	@include from(l) {
+		display: block;
+	}
+}
+
+.block {
+	// display: block;
+	
+	@include from(l) {
+		display: none;
+	}
+
+}

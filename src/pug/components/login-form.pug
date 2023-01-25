@@ -1,0 +1,25 @@
+div(class="ed-container modal__container")
+	div(class="signUp login-form")
+		//- a(href="index.html")
+		//- 	img(src='assets/img/fanattic.bet_logo.png', alt="fannatic logo")
+		h3(class="login-form__h3") Ingresar 
+		p(class="login-form__p") WinBet
+		form(class="signUp__form" name="LoginForm" action="javascript:void(0)" onsubmit="BackEndLogin(this); return false") 
+
+			div(class="signUp__form--container ed-grid s-grid-1") 
+				label(for="username" class="signUp__form--label") Nombre
+				input(type="text" class="signUp__form--input" placeholder="Nombre" name="username" required)
+			
+				label(for="password" class="signUp__form--label") Contraseña 
+				input(type="password" class="signUp__form--input" placeholder="Contraseña"  name="password" required)
+
+			div(class="text-center mt-2") 
+					span(name="msj_loading" id="id-login-loading")
+					small(name="msj_error_lg" class="text-danger")
+
+			input(class="signUp__form--button btn btn__form" type="submit" name="send" id="send" value="Ingresar")
+			input( type="hidden" name="BackEndUrl" value="https://apuestas.winbet.com.mx/")
+			//- div(class="signUp__form--login") 
+			//- 	a(href="#")  ¿Olvidaste la contraseña? 
+				//- p ¿No tienes cuenta? 
+				//- 	a(href="registro.html") Click aqui

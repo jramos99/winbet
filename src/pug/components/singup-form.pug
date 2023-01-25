@@ -1,0 +1,68 @@
+//- mixin option(currency)
+//- 	option= currency
+
+mixin item(contry)
+	option(class="signUp__form--option")= contry
+
+//- div(class="background-color")
+div(class="ed-container modal__container")
+	div(class="signUp")
+		//- a(href="index.html")
+		//- 	img(src='assets/img/fanattic.bet_logo.png', alt="fannatic logo")
+		h3(class="signUp__h3") Create cuenta
+		form(action="" class="signUp__form") 
+
+			div(class="signUp__form--container ed-grid s-grid-1 l-grid-2") 
+				label(for="text" class="signUp__form--label") Nombre
+					input(type="email" name="email" class="signUp__form--input" placeholder="Nombre")
+				
+				label(for="text" class="signUp__form--label") Apellidos
+					input(type="email" name="email" class="signUp__form--input" placeholder="Apellidos")
+			
+				label(for="email" class="signUp__form--label") Correo
+					input(type="email" name="email" class="signUp__form--input" placeholder="Correo")
+
+				label(for="email" class="signUp__form--label") Confirmar correo
+					input(type="email" name="email" class="signUp__form--input" placeholder="Confirmar correo")
+			
+				label(for="password" class="signUp__form--label") Contrasena 
+					input(type="password" name="password" class="signUp__form--input" placeholder="Contrasena")
+				
+				label(for="password" class="signUp__form--label") Confirmar Contrasena 
+					input(type="number" name="password" class="signUp__form--input" placeholder="Confirmar Contrasena")
+				
+				select(name="" class="signUp__form--select") 
+					-for(var i = 0; i < contries.length ; i++)
+						-var contry  = contries[i]
+						+item(contry.contry)
+				
+				select(name="" class="signUp__form--select") 
+					-for(var i = 0; i < contries.length ; i++)
+						-var contry  = contries[i]
+						+item(contry.contry)
+				
+				label(for="password" class="signUp__form--label") Ciudad 
+					input(type="text" name="password" class="signUp__form--input" placeholder="Ciudad")
+				
+				label(for="password" class="signUp__form--label") Telefono 
+					input(type="number" name="password" class="signUp__form--input" placeholder="Telefono")
+
+				label(for="password" class="signUp__form--label") Sitio Web
+					input(type="text" name="password" class="signUp__form--input" placeholder="Sitio Web")
+				
+				label(for="password" class="signUp__form--label") Skype 
+					input(type="text" name="password" class="signUp__form--input" placeholder="Skype")
+				
+				label(for="password" class="signUp__form--label") Codigo postal 
+					input(type="text" name="password" class="signUp__form--input" placeholder="Codigo postal")
+
+				label(for="password" class="signUp__form--label") Fecha de nacimiento 
+					input(type="date" name="password" class="signUp__form--input" placeholder="Fecha de nacimiento")
+				
+				
+			
+			button(type="submit" class="signUp__form--button btn btn__form") Registrarse ahora
+			
+			div(class="signUp__form--login") 
+				p ¿No tienes cuenta todavia? 
+					a(href="iniciar-sesion.html")  Iniciar Sesion

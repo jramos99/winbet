@@ -1,0 +1,162 @@
+.btn {
+	border: none;
+    border-radius: 5px;
+	color: var(--color-body);
+	font-weight: bold;
+    padding: 4px 8px;
+	text-transform: capitalize;
+	font-size: var(--small-font-size);
+	cursor: pointer;
+	
+	&__singup {
+		background-color: var(--color-third);
+		border: 2px solid var(--color-third);
+		font-weight: 500;
+		
+		@include from(l) {
+			&:hover {
+				background-color: transparent;
+				color:  var(--color-body);
+				border: 2px solid var(--color-third);
+			}
+		}
+		
+	}
+	
+	&__login {
+		background-color: var(--color-second);
+		border: 2px solid var(--color-second);
+		color: var(--color-background );
+		font-weight: 500;
+		
+		&:active {
+			background-color: transparent;
+		}
+		
+		@include from(l) {
+			&:hover {
+				background: transparent;
+				border: 2px solid var(--color-second);
+				color: var(--color-bodyThird);
+			}
+		}
+	}
+
+	&__primary {
+		padding: 8px 16px;
+		background-color: var(--color-first);
+		border-radius: 7px;
+		color: var(--color-background);
+		text-align: center;
+		font-family: var(--button-font);
+		font-size: 2rem;
+		max-width: 300px;
+		width: 80%;
+		// position: absolute;
+		// bottom: 0;
+
+
+		&:active {
+			background-color: var(--color-second) !important;
+			color: var(--color-background) !important;
+		}
+		
+		
+		@include from(l) {
+			// position: relative;
+			font-size: 2.5rem;
+			width: 512px;
+			padding: 9px 16px;
+			&:hover {
+				background-color: var(--color-second);
+				color: var(--color-background);
+			}
+		}
+	}
+	
+	&__secondary {
+		padding: 8px 16px;
+		background-color: transparent;
+		border: 1px solid var(--color-background);
+		border-radius: 1px;
+		font-size: 14px;
+		color: var(--color-background);
+		width: 169px;
+
+		@include from(m) {
+			width: auto;
+		}
+		
+		@include from(l) {
+			font-size: 14px;
+			padding: 8px 16px;
+			
+			&:hover {
+				background-color: var(--color-first);
+				color: var(--color-background);
+				border: none;
+			}
+		}
+	}
+
+	&__third {
+		padding: 8px 16px;
+		background-color: transparent;
+		border: 1px solid var(--color-bodyThird);
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--color-background);
+		width: 250px;
+		text-align: center;
+
+		@include from(l) {
+			&:hover {
+				border: 1px solid var(--color-first);
+				color: var(--color-first);
+				font-weight: 700;
+			}
+		}
+	}
+	
+	&__banca {
+		border-radius: 0px;
+		padding: 8px 16px;
+		background-color: transparent;
+		border: 1px solid var(--color-second);
+		font-size: 14px;
+		font-weight: 500;
+		color: var(--color-second);
+		width: 220px;
+		text-align: center;
+
+		@include from(l) {
+			&:hover {
+				border: 1px solid var(--color-second);
+				color: var(--color-background);
+				font-weight: 700;
+				background-color: var(--color-second);
+			}
+		}
+	}
+
+	&__form {
+		background-color: var(--color-second);
+		border: 2px solid var(--color-second);
+		color: var(--color-background );
+		font-weight: 500;
+		
+		&:active {
+			background-color: transparent;
+		}
+		
+		@include from(l) {
+			&:hover {
+				background: var(--color-heading);
+				border: 2px solid var(--color-heading);
+				color: var(--color-background);
+			}
+		}
+	}
+}
+
+

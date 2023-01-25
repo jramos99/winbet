@@ -1,0 +1,38 @@
+mixin promotionCards(id, img, alt, link, textLink)
+	div(class="grid__card promotions__box")
+		a(href=link class='promotions__box--anchore', class=id) 
+			img(src=img, alt=alt, class="grid__img relative promotions__box--img")
+			div(class="promotions__grid--content")
+				//- h3(class="grid__content--p")= text 
+				a(href=link class="btn btn__third grid__content--anchore")= textLink
+
+mixin promotionCardsImg(id, img, alt, link, textLink)
+	div(class="grid__card promotions__box")
+		a(href=link class='promotions__box--anchore', class=id) 
+			img(src=img, alt=alt, class="grid__img relative promotions__box--img")
+
+section(class="games promotions")
+	div(class="games__container promotions__container display")
+		h2(class="promotions__container--h2") Bonos y promociones
+		div(class=' grid ed-grid s-grid-1 l-grid-2 row-gap l-big-section') 
+			-for(var i = 0; i < promotions.length ; i++)
+				-var promotion = promotions[i]
+				if(promotion.textLink)
+					+promotionCards(promotion.id, promotion.img , promotion.alt, promotion.link, promotion.textLink)
+				else 
+					+promotionCardsImg(promotion.id, promotion.img , promotion.alt, promotion.link)
+
+	div(class="games__slider block")
+		h2(class="promotions__container--h2") Bonos y promociones
+		div(class='tns-single' aria-hidden="true" id='tnsSinglePromitions')
+			-for(var i = 0; i < promotionsMobile.length; i++)
+				if(promotionsMobile[i].textLink)
+					div(class="promotions__grid--card")
+						a(href=promotionsMobile[i].link) 
+							img(src=promotionsMobile[i].img alt=promotionsMobile[i].alt class="grid__img")
+							div(class="promotions__grid--content")
+								a(href=promotionsMobile[i].link class="grid__content--anchore btn btn__third")= promotionsMobile[i].textLink
+				else 
+					div(class="promotions__grid--card")
+						a(href=promotionsMobile[i].link) 
+							img(src=promotionsMobile[i].img alt=promotionsMobile[i].alt class="grid__img")

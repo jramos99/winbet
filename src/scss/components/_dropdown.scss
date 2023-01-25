@@ -1,0 +1,29 @@
+.dropdown {
+
+	@include fromTo(s,l) {
+		display: flex;
+		flex-direction: column;
+		width: 200px;
+	
+		&__button {
+			border: unset;
+			background-color: transparent;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	
+		&__button--img {
+			width: 25px;
+		}
+	
+		&__button--p {
+			color: var(--color-body);
+		}
+	
+		&__expand {
+			background-color: var(--color-background);
+			display: none;
+		}
+	}
+}

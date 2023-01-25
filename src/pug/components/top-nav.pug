@@ -1,0 +1,24 @@
+mixin list(item, link)
+	li(class='top-nav__li'): a(href=link, class='top-nav__anchor')=item
+
+mixin connect(icon, link, alt)
+	li(class="top-nav__connect--li") 
+		a(href=link target='_blank')
+			img(src=icon, alt=alt)
+//- mixin dropdown(img, text) 
+//- 	img(src=img, alt="text")
+//- 	p=text
+
+nav(class='top-nav')
+	div(class='top-nav__container')
+		button(type='button', aria-label="hamburguer menu" class='top-nav__mb-iconMenu hamburger hamburger--slider-r display')
+			span.hamburger-box
+				span.hamburger-inner
+		a(href='./', class='top-nav__link')
+			img(src='assets/img/WINBET-LOGO.png', alt='winbet logo', class='top-nav__logo')
+		ul(class='top-nav__menu')
+			-for(var i = 0; i < list.length ; i++)
+				-var item = list[i]
+				+list(item.item, item.link)
+		div(class='top-nav__btns--container btn')
+			a(href="iniciar-sesion.html", class='btn__login btn sign') Ingresar

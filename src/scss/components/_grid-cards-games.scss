@@ -1,0 +1,134 @@
+.grid-cardsGames {
+    width: 100%;
+
+	@include from(l) {
+		margin-bottom: 6rem;
+	}
+
+    &__breadcrumb {
+        display: flex;
+		align-items: center;
+		padding: 0.5rem 0;
+		gap: 0.2rem;
+		margin: 2rem 0 2rem 0;
+		// background-color: var(--color-second);
+
+		a{
+			display: flex;
+			align-items: center;
+			flex-direction: row-reverse;
+			padding: 0.2rem 0.2rem;
+			padding-right: 0.8rem;
+			border: 0.5px solid gray;
+			text-transform: capitalize;
+			border-radius: 0.2rem;
+			justify-content: center;
+			
+			&:active {
+				border: 0.5px solid var(--color-heading );
+				color: var(--color-heading );
+			}
+			
+			@include from(l) {
+				padding: 0;
+				padding-right: 0.5rem;
+				
+				&:hover {
+					background-color: var(--color-second);
+					color: var(--color-background);
+					border: 0.5px solid var(--color-second);
+				}
+
+			}
+		}
+
+		p {
+			margin-bottom: 0;
+			color: var(--color-bodySecond );
+			font-weight: bold;
+		}
+
+		@include from(l) {
+			margin: 3rem 0 2rem 0;
+		}
+    }
+
+    &__container {
+        max-width: 1280px;
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+
+    &__container--block {
+        margin-bottom: 2rem;
+		gap: 1rem;
+		justify-content: space-between;
+    }
+
+    &__container--h3 {
+        font-size: var(--h3-font-size);
+        color: var(--color-heading);
+		margin-bottom: 1.5rem;
+		text-transform: capitalize;
+
+    }
+
+    &__card {
+        // border-radius: 5px;
+        // border: solid black;
+        position: relative;
+        overflow: hidden;
+
+        &:hover .grid-cardsGames__overlay {
+            transform: translateY(0);
+        }
+    }
+
+    &__img {
+        width: 100%;
+		height: auto;
+    }
+
+    &__overlay {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+		
+		@include from(l) {
+			transform: translateY(100%);
+			transition: .2s ease-in-out;
+			z-index: 1;  
+		}
+    }
+
+    &__card--content {
+        background: rgba(0, 0, 0, 0.70);;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0;
+
+    }
+
+    &__card--content-h3 {
+        font-size: var(--small-font-size );
+        color: var(--color-background);
+    }
+
+    &__card--content-a {
+        width: 80%;
+        text-align: center;
+
+        @include from(l) {
+            &:hover {
+                color: var(--color-background);
+            }
+        }
+    }
+
+}

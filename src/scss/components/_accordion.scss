@@ -1,0 +1,98 @@
+.rules {
+	background: transparent linear-gradient(90deg, #00013B 0%, #203C71 20%, #2B2F88 51%, #203C71 79%, #00013B 100%) 0% 0% no-repeat padding-box;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.background-img {
+	background-image: url(../../assets/img/background-rules.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+	background-position-x: center;
+	height: 200px;
+	margin: 0 auto;
+	max-width: 1280px;
+	width: 100%;
+
+	@include from(l) {
+		height: 600px;
+	}
+}
+
+.accordion {
+	max-width: 1280px;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 1rem;
+	
+	&__outline {
+		color: #535353;
+		background-color: var(--color-background);
+		padding: 1rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		border-radius: 5px;
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+		border-bottom: 1px solid var(--color-text-gray-m);
+		margin-bottom: 1rem;
+		padding-bottom: 6px;
+		font-weight: 400;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s ease-in-out;
+		display: block;
+		// background-color: aqua;
+	}
+	&__content {
+		background-color: var(--color-background);
+		color: #535353;
+		display: none;
+		margin-bottom: 2rem;
+		padding: 1rem 1.5rem;
+		margin-top: -1.3rem;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+	}
+	
+	
+	
+	
+}
+
+.accordion .accordion__outline span {
+	display: block;
+	position: absolute;
+	height: 14px;
+	width: 14px;
+	right: 20px;
+	top: 1rem;
+	
+}
+.accordion .accordion__outline span::after {
+	content: "";
+	width: 14px;
+	height: 3px;
+	border-radius: 2px;
+	position: absolute;
+	background-color:#535353;
+	top: 6px;
+}
+
+.accordion .accordion__outline span::before {
+	content: "";
+	width: 14px;
+	height: 3px;
+	border-radius: 2px;
+	background-color:#535353;
+	position: absolute;
+	top: 6px;
+	transform: rotate(90deg);
+	transition: all 0.3s ease-in-out;
+}
+
+.accordion .accordion__outline.active span::before {
+	transform: rotate(0deg);
+}

@@ -1,0 +1,19 @@
+extends ../config/template
+append config
+	-currentPage		= "Video Poker"
+	-siteName			= 'WinBet'
+	-content			= 'content'
+	-pageDescription	= 'This website contains a collection of projects developed by Enrique Estrada using a Gulp boilerplate developed by him'
+block main-header
+block main-container
+	section(class="grid-cardsGames")
+		div(class="grid-cardsGames__container")
+			div(class="grid-cardsGames__breadcrumb")
+				a(href="casino.html" class="grid-cardsGames__breadcrumb--anchore") volver
+					span(class="material-symbols-outlined") chevron_left
+				span(class="material-symbols-outlined")  chevron_right
+				p Video Poker
+			h3(class="grid-cardsGames__container--h3") ver más
+			div(class="ed-grid s-grid-1 m-grid-3 l-grid-4 grid-cardsGames__container--block")
+				include ../config/utilis/video-poker-seeMore
+block scripts

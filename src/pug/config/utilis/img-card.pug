@@ -1,0 +1,7 @@
+mixin pushItem(img, alt, i)
+	div: div(class='tns-carousell__content' id=i): span
+		img(src=img, alt=alt)
+
+-for(var i = 0; i < sliderBonuses.length ; i++)
+		-var item = sliderBonuses[i]
+		+pushItem(item.img, item.alt,i)
