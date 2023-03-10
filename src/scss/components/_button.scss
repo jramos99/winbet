@@ -78,14 +78,14 @@
 	&__secondary {
 		padding: 8px 16px;
 		background-color: transparent;
-		border: 1px solid var(--color-background);
-		border-radius: 1px;
+		border: 1px solid #ED1C24;
+		border-radius: 20px;
 		font-size: 14px;
-		color: var(--color-background);
-		width: 169px;
+		color: #ED1C24;
+		width: 154px;
 
 		@include from(m) {
-			width: auto;
+			// width: auto;
 		}
 		
 		@include from(l) {
