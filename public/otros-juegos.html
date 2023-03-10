@@ -2,7 +2,7 @@
 <html class="no-js" lang="es" prefix="og: http://ogp.me/ns#">
   <head>
     <meta charset="utf-8">
-    <meta name="This website contains a collection of projects developed by Enrique Estrada using a Gulp boilerplate developed by him" content="content">
+    <meta name="sitio de WinBet" content="content">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="viewport" content="width = 320, initial-scale = 2.3">
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5">
     <meta name="viewport" content="width = 320, initial-scale = 2.3">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="sportsmania website">
+    <meta name="description" content="Winbet website">
     <!--X-UA-compatible-->
     <meta http-equiv="X-UA-compatible" content="IE=11">
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
@@ -27,7 +27,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/fav-sportsmania.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/winbet-fav.jpg">
     <!--PWA tags here-->
     <meta name="theme-color" content="#0096D9">
     <meta name="MobileOptimized" content="width">
@@ -58,14 +58,31 @@
       <header class="main-header">
         <nav class="top-nav">
           <div class="top-nav__container">
-            <button class="top-nav__mb-iconMenu hamburger hamburger--slider-r display" type="button" aria-label="hamburguer menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="top-nav__link" href="./"><img class="top-nav__logo" src="assets/img/WINBET-LOGO.png" alt="winbet logo"></a>
+            <button class="top-nav__mb-iconMenu hamburger hamburger--slider-r display" type="button" aria-label="hamburguer menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button><a class="top-nav__link" href="./"><img class="top-nav__logo" src="assets/img/Logo.svg" alt="winbet logo"></a>
             <ul class="top-nav__menu">
                       <li class="top-nav__li"><a class="top-nav__anchor" href="casino.html">Casino</a></li>
                       <li class="top-nav__li"><a class="top-nav__anchor" href="deportes.html">Deportes</a></li>
                       <li class="top-nav__li"><a class="top-nav__anchor" href="racebook.html">Racebook</a></li>
                       <li class="top-nav__li"><a class="top-nav__anchor" href="apuestas-en-vivo.html">Apuestas en vivo</a></li>
             </ul>
-            <div class="top-nav__btns--container btn"><a class="btn__login btn sign" href="iniciar-sesion.html">Ingresar</a></div>
+            <div class="top-nav__btns--container btn mobile"><a class="btn__singup btn sign" href="iniciar-sesion.html">Ingresar</a><a class="btn__login btn sign" href="registro.html">Registro</a></div>
+            <div class="top-nav__btns--container btn desktop">
+              <form class="signUp__form" name="LoginForm" action="javascript:void(0)" onsubmit="BackEndLogin(this); return false">
+                <div class="form-content">
+                  <label class="signUp__form--label" for="username"></label>
+                  <input class="signUp__form--input" type="text" placeholder="Usuario" name="username" required="">
+                  <label class="signUp__form--label" for="password"></label>
+                  <input class="signUp__form--input" type="password" placeholder="Contraseña" name="password" required="">
+                  <div class="forgot-container">
+                    <div class="message"><span id="id-login-loading" name="msj_loading"></span><small class="text-danger" name="msj_error_lg"></small></div><a class="forgot" href="forgot-password.html">¿Olvido su contraseña?</a>
+                  </div>
+                  <input type="hidden" name="BackEndUrl" value="https://apuestas.jazzgsdemo.com">
+                </div>
+                <div class="form-buttons">
+                  <input class="btn__singup btn sign" id="send" type="submit" name="send" value="ACCEDER"><a class="btn__login btn sign" href="registro.html">REGISTRATE </a>
+                </div>
+              </form>
+            </div>
           </div>
         </nav>
       </header>
@@ -193,7 +210,16 @@
         </nav>
       </footer>
       <div class="main-footer__bottom">
-        <p class="main-footer__bottom--p">CopyRight ©2023 sportsmania.com.mx Todos los derechos reservados.</p>
+        <div class="lincense-footer">
+          <div class="lincense-footer-container">
+            <p class="lincense-footer__bottom--p">Se hace referencia al escrito presentado en la oficialía de partes de la Dirección  General de Juegos y Sorteos el 04 de enero de 2023 con número de folio 0064, por medio del cual solicita autorizar el inicio de operaciones del sitio de internet http://www.winbet.com.mx.  por Io que remite para tal efecto la documentación que más adelante se describe. Establecido lo anterior, esta Autoridad Administrativa señala los siguientes antecedentes:</p>
+            <ul> 
+              <li class="lincense-footer__bottom--p">La Dirección General de Juegos y Sorteos de la Secretaria de Gobernación mediante oficio DGJS/SAAJ/1845/2012  otorgó a la persona moral Juegos y Sorteos de Jalisco SA de CV el permiso número DCJS/P-02/2012, cuya vigencia es del 29 de noviembre de 2012 al 28 de noviembre de 2037.</li>
+              <li class="lincense-footer__bottom--p">Por oficio DGJS/DGAJ/DEV/O562/2013 de fecha 17 de julio de 2013, la Dirección General de Juegos y Sorteos autorizó a la permisionaria Juegos y Sorteos de Jalisco, SA de CV a la captación apuestas por internet a través de las máquinas,  sistemas, plataformas y tecnologías.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="main-footer__bottom--p">CopyRight ©2023 winbet.com.mx Todos los derechos reservados.</p>
       </div>
       <script src="https://images.betimages.com/Betslip/js/quick.login.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

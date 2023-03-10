@@ -9,15 +9,16 @@
 	cursor: pointer;
 	
 	&__singup {
-		background-color: var(--color-third);
-		border: 2px solid var(--color-third);
+		background-color: #FFFFFF;
+		border: 2px solid #FFFFFF;
+		color: #003876;
 		font-weight: 500;
 		
 		@include from(l) {
 			&:hover {
 				background-color: transparent;
 				color:  var(--color-body);
-				border: 2px solid var(--color-third);
+				border: 2px solid var(--color-footer);
 			}
 		}
 		

@@ -15,10 +15,27 @@ nav(class='top-nav')
 			span.hamburger-box
 				span.hamburger-inner
 		a(href='./', class='top-nav__link')
-			img(src='assets/img/WINBET-LOGO.png', alt='winbet logo', class='top-nav__logo')
+			img(src='assets/img/Logo.svg', alt='winbet logo', class='top-nav__logo')
 		ul(class='top-nav__menu')
 			-for(var i = 0; i < list.length ; i++)
 				-var item = list[i]
 				+list(item.item, item.link)
-		div(class='top-nav__btns--container btn')
-			a(href="iniciar-sesion.html", class='btn__login btn sign') Ingresar
+		div(class='top-nav__btns--container btn mobile')
+			a(href="iniciar-sesion.html", class='btn__singup btn sign') Ingresar
+			a(href="registro.html", class='btn__login btn sign') Registro
+		div(class='top-nav__btns--container btn desktop')
+			form.signUp__form(name='LoginForm' action='javascript:void(0)' onsubmit='BackEndLogin(this); return false')
+				div(class="form-content")
+					label.signUp__form--label(for='username')
+					input.signUp__form--input(type='text' placeholder='Usuario' name='username' required='')
+					label.signUp__form--label(for='password')
+					input.signUp__form--input(type='password' placeholder='Contraseña' name='password' required='')
+					div(class="forgot-container")
+						.message
+							span#id-login-loading(name='msj_loading')
+							small.text-danger(name='msj_error_lg')
+						a(href="forgot-password.html" class="forgot") ¿Olvido su contraseña?
+					input(type='hidden' name='BackEndUrl' value='https://apuestas.jazzgsdemo.com')
+				div(class="form-buttons")
+					input#send.btn__singup.btn.sign(type='submit' name='send' value='ACCEDER')
+					a(href="registro.html", class='btn__login btn sign') REGISTRATE 

@@ -110,37 +110,37 @@
 	],
 	"games": [
 		{
-			"img": "assets/img/Product_1.jpg",
+			"img": "assets/img/Card_1.png",
 			"text": "deporte",
 			"link": "iniciar-sesion.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
-			"img": "assets/img/Product_2.jpg",
+			"img": "assets/img/Card_2.png",
 			"text": "casino",
 			"link": "iniciar-sesion.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
-			"img": "assets/img/Product_3.jpg",
+			"img": "assets/img/Card_3.png",
 			"text": "casino en vivo",
 			"link": "iniciar-sesion.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
-			"img": "assets/img/Product_4.jpg",
+			"img": "assets/img/Card_4.png",
 			"text": "racebook",
 			"link": "iniciar-sesion.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
-			"img": "assets/img/Product_5.jpg",
+			"img": "assets/img/Card_5.png",
 			"text": "apuestas en vivo",
 			"link": "iniciar-sesion.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
-			"img": "assets/img/Product_6.jpg",
+			"img": "assets/img/Card_6.png",
 			"text": "crear propuesta",
 			"link": "iniciar-sesion.html",
 			"textLink": "Ingresar ahora"

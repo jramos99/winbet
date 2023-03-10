@@ -1,5 +1,5 @@
 .top-nav{
-	background    	: var(--color-background);
+	background    	: #003876;
 	position      	: fixed;
 	top           	: 0;
 	width         	: 100%;
@@ -11,7 +11,7 @@
 
 	&__container {
 		align-items: center;
-		background-color: var(--color-background);
+		background-color: #003876;
 		display: flex;
 		justify-content: space-between;
 		height        	: var(--header-height);
@@ -166,6 +166,76 @@
 			outline: thin dotted;
 			outline: 5px auto -webkit-focus-ring-color;
 			outline-offset: -2px;
+			
 		}
 	}
 } 
+.mobile{
+    display: flex;
+    @include from(700px){
+        display: none;
+    }
+}
+.desktop{
+    display: none;
+    @include from(700px){
+        display: flex;
+    }
+}
+.top-nav__container{
+	.signUp__form{
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: end;
+		align-items: flex-start;
+		gap: 5px;
+		.form-content{
+			width: 40%;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: end;
+			gap: 5px;
+			.signUp__form--input{
+				margin-bottom: 0px;
+				width: 45%;
+				height: 34px;
+				margin-top: 7px;
+				margin-left: 0px;
+			}
+			.forgot-container{
+				width: 95%;
+				display: flex;
+			}
+			.message{
+				width: 50%;
+				font-size: 10px;
+				text-align: right;
+			}
+			.forgot{
+				width: 50%;
+				font-size: 9px;
+				text-align: right;
+				color: #fff;
+			}
+		}
+		.form-buttons{
+			width: 17%;
+			display: flex;
+			flex-direction: column;
+			// gap: 5px;
+			.btn{
+				width: 100%;
+				max-width: 100px;
+				font-size: 14px;
+				align-self: flex-start;
+				height: 34px;
+			}
+			input.btn{
+				margin-top: 7px;
+				margin-bottom: 2px;
+			}
+		}
+	}
+}

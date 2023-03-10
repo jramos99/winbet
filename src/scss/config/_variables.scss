@@ -1,6 +1,6 @@
 //layout
 :root {
-  --header-height 		: 4rem;
+  --header-height 		: 5rem;
   @include from(l) {
     --header-height 	: 5rem;
   }
