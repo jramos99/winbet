@@ -12,9 +12,6 @@ function closeModal() {
         modal.classList.add("hide");
         localStorage.setItem("modalAbierto", false);
     });
-    window.addEventListener("load",function(){
-        console.log("pagina cargada")
-    })
 }
 
 export{
