@@ -53,8 +53,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Ingresar | WinBet</title>
-    <body class="ingresar" overlay itemscope itemtype="http://schema.org/WebPage">
+    <title>Registro | WinBet</title>
+    <body class="Registro" overlay itemscope itemtype="http://schema.org/WebPage">
       <header class="main-header">
         <nav class="top-nav">
           <div class="top-nav__container">
@@ -86,24 +86,7 @@
           </div>
         </nav>
       </header>
-      <main class="main-container">
-        <div class="ed-container modal__container">
-          <div class="signUp login-form">
-            <h3 class="login-form__h3">Ingresar </h3>
-            <p class="login-form__p">WinBet</p>
-            <form class="signUp__form" name="LoginForm" action="javascript:void(0)" onsubmit="BackEndLogin(this); return false"> 
-              <div class="signUp__form--container ed-grid s-grid-1"> 
-                <label class="signUp__form--label" for="username">Nombre</label>
-                <input class="signUp__form--input" type="text" placeholder="Nombre" name="username" required>
-                <label class="signUp__form--label" for="password">Contraseña </label>
-                <input class="signUp__form--input" type="password" placeholder="Contraseña" name="password" required>
-              </div>
-              <div class="text-center mt-2"> <span name="msj_loading" id="id-login-loading"></span><small class="text-danger" name="msj_error_lg"></small></div>
-              <input class="signUp__form--button btn btn__form" type="submit" name="send" id="send" value="Ingresar">
-              <input type="hidden" name="BackEndUrl" value="https://apuestas.winbet.com.mx/"><a href="forgot-password.html">Olvidó su Contraseña?</a>
-            </form>
-          </div>
-        </div>
+      <main class="main-container"><iframe width="100%" height="1150px" id="iframe-registro-page" class="cs-iframe-registro-page" src="https://apuestas.winbet.com.mx/registro " title="iframe-registro"></iframe>
       </main>
       <footer class="main-footer">
         <div class="main-footer__top"><a class="main-footer__top--logo" href="/"><img class="top-nav__logo" src="assets/img/WINBET-LOGO.svg" alt="winbet logo"></a></div>

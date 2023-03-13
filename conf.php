@@ -1,7 +1,7 @@
 <?php
-define("SITE_NAME","Sports Mania");
-define("DOMAIN_NAME","sportsmania.com.mx");
-define("DGS_SITEID","935");
+define("SITE_NAME","Winbet");
+define("DOMAIN_NAME","winbet.com.mx");
+define("DGS_SITEID","942");
 $mobileEnabled = false;
 require "C:\\inetpub\\wwwroot\\generalConfig.php";
 ?>
