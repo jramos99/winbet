@@ -1,0 +1,108 @@
+.modal-promos{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #00000062;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &-container{
+        margin-top: 50px;
+        width: 100%;
+        max-width: 514px;
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 38px;
+        padding: 20px;
+        height: fit-content;
+        @include from(610px){
+            margin-top: 85px;
+        }
+
+        button{
+            background-color: #FFF;
+            color: #000;
+            border: 0px;
+            font-size: 50px;
+        }
+        h3{
+            color:#003876;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 0px;
+            line-height: 20px;
+            margin-top: 15px;
+            @include from(610px){
+                font-size: 60px;
+                line-height: 70px;
+            }
+        }
+        h2{
+            color: #DC2E26;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 0px;
+            @include from(610px){
+                font-size: 67px;
+                line-height: 40px;
+                margin-bottom: 20px;
+            }
+        }
+        p{
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 0px;
+            line-height: 18px;
+            @include from(610px){
+                font-size: 31px;
+                line-height: 49px;
+                padding-left: 98px;
+                padding-right: 98px;
+                margin-bottom: 0px;
+            }
+        }
+        span{
+            display: block;
+            width: 100%;
+            font-size: 22px;
+            text-align: center;
+            color: #000;
+            margin-bottom: 15px;
+            @include from(610px){
+                font-size: 28px;
+            }
+        }
+        .button-container{
+            display: flex;
+            justify-content: center;
+            .sign{
+                width: 100%;
+                max-width: 364px;
+                border: 1px solid;
+                border-radius: 47px;
+                font-size: 37px;
+                margin-bottom: 15px;
+            }
+            
+        }
+        .modal-img-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            img{
+                width: 100%;
+                max-width: 364px;
+            }
+            @include from(610px){
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

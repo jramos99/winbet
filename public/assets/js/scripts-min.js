@@ -56,21 +56,7 @@ var bottomNav = exports.bottomNav = function bottomNav() {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-var tnsSingle = function tnsSingle() {
-	var slider = tns({
-		container: '#tnsSingle',
-		items: 1,
-		slideBy: 1,
-		controls: false,
-		autoplay: true,
-		autoplayHoverPause: true,
-		autoplayButtonOutput: false,
-		speed: 1000,
-		mode: 'gallery',
-		mouseDrag: true,
-		controlsText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>']
-	});
-};
+
 
 var tnsSingleGames = function tnsSingleGames() {
 	var slider = tns({
@@ -99,7 +85,6 @@ var tnsSingleGames = function tnsSingleGames() {
 	});
 };
 
-exports.tnsSingle = tnsSingle;
 exports.tnsSingleGames = tnsSingleGames;
 
 },{}],4:[function(require,module,exports){
@@ -150,7 +135,7 @@ var _accordion = require('./components/accordion');
 	(0, _bottomNav.bottomNav)();
 	if (document.body.classList.contains('inicio')) {
 		// functions here
-		(0, _tnsSlider.tnsSingle)();
+
 		(0, _tnsSlider.tnsSingleGames)();
 	} else if (document.body.classList.contains('reglas')) {
 		(0, _accordion.accordionCard)();

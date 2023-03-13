@@ -1,4 +1,4 @@
-import {tnsSingle, tnsSingleGames} from './components/tns-slider';
+import {tnsSingleGames} from './components/tns-slider';
 import {topNav} from './components/topNav';
 import {bottomNav} from './components/bottomNav';
 import {accordionCard} from './components/accordion';
@@ -8,7 +8,7 @@ import {accordionCard} from './components/accordion';
 	bottomNav();
 	if (document.body.classList.contains('inicio')) {	
 		// functions here
-		tnsSingle();
+		
 		tnsSingleGames();
 	}else if (document.body.classList.contains('reglas')) {
 		accordionCard();

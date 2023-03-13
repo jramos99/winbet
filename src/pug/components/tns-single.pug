@@ -1,17 +1,25 @@
-mixin card(image, alt, field) 
-	div
-		div(class='tns-single__content'): img(src=image alt=alt class='tns-single__img' )
-
-
-div(class='container-slider')
-	div(class='container-slider__slider' aria-hidden="true")
-		div(class='tns-single' id='tnsSingle')
-			-for(var i = 0; i < slides.length; i++)
-				div(class="tns-single__container")
-					div(class='tns-single__slide ed-grid s-grid-1 l-grid-2')
-						div(class="tns-single__content s-order-1 l-order-1" aria-hidden="true")
-							h2(class="tns-single__content--medium")= slides[i].field2
-							//- a(href=slides[i].link class="tns-single__content--anchore btn btn__primary")= slides[i].linkText
-						a(href=slides[i].link class="tns-single__content--anchore btn btn__primary s-order-3 l-order-3")= slides[i].linkText
-						div(class="tns-single__img s-order-2 l-order-2" aria-hidden="true")
-							img(src=slides[i].image, alt=slides[i].alt)
+div(class='main-banner')
+	div(class='main-banner-container')
+		div(class="main-banner-main-container")
+			div(class="main-banner-button")
+				h2 JUEGA
+				h3 APUESTA & DIVIÉRTETE
+				a(href="registro.html" class="grid__content--anchore btn btn__main-banner") ¡ÚNETE AHORA!
+			div(class="main-banner-img")
+				img(src="assets/img/Player_1.png", alt="main banner img")
+		div(class="main-banner-steps")
+			div(class="main-banner-steps-step")
+				h2 1.
+				div(class="text-container")
+					h3 REGÍSTRATE
+					p ES TOTALMENTE GRATIS Y MUY FÁCIL
+			div(class="main-banner-steps-step")
+				h2 2.
+				div(class="text-container")
+					h3 APUESTA
+					p INCREÍBLE OFERTA DE EVENTOS DEPORTIVOS
+			div(class="main-banner-steps-step")
+				h2 3.
+				div(class="text-container")
+					h3 GANA
+					p RECIBE INCREÍBLES BENEFICIOS

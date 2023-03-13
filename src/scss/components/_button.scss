@@ -17,8 +17,8 @@
 		@include from(l) {
 			&:hover {
 				background-color: transparent;
-				color:  var(--color-body);
-				border: 2px solid var(--color-footer);
+				color:  #fff;
+				border: 2px solid #fff;
 			}
 		}
 		
@@ -38,7 +38,7 @@
 			&:hover {
 				background: transparent;
 				border: 2px solid var(--color-second);
-				color: var(--color-bodyThird);
+				color: #fff;
 			}
 		}
 	}
@@ -96,6 +96,27 @@
 				background-color: var(--color-first);
 				color: var(--color-background);
 				border: none;
+			}
+		}
+	}
+	&__main-banner{
+		padding: 8px 16px;
+		background-color: #ED1C24;
+		border: 1px solid #ED1C24;
+		border-radius: 20px;
+		font-size: 14px;
+		color: #fff;
+		width: 154px;
+		
+		@include from(922px){
+            width: 83%;
+			font-size: 40px;
+        }
+		@include from(l) {
+			&:hover {
+				border: 1px solid #ED1C24;
+				background-color: #ED1C24;
+
 			}
 		}
 	}
@@ -159,5 +180,4 @@
 		}
 	}
 }
-
 
