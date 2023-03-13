@@ -1,6 +1,6 @@
 .bottom-nav{
-	border-bottom 	: 1px solid #DFE0E0;
-	background    	: var(--color-background);
+	border-bottom 	: 1px solid #003876;
+	background    	: #003876;
 	position      	: fixed;
 	bottom         	: 0;
 	width         	: 100%;
@@ -52,7 +52,7 @@
 		height 			: 100vh;
 		width 			: 100%;
 		max-width		: 320px 		;
-		background 		: var(--color-first);
+		background 		: #003876;
 		transition 		: right .5s;
 		overflow-y 		: auto;
 		top				: 4rem;
