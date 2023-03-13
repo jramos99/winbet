@@ -19,7 +19,7 @@ body {
 	padding    		: 50px 0 50px 0;
 	font-size  		: fontSize(small);
 	margin-top 		: auto;
-	position: relative;
+	// position: relative;
 	width: 100%;
 	display: block;
 	@include from(550px){
