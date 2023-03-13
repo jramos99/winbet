@@ -17,10 +17,10 @@ div(class='ed-grid m-grid-2 row-gap main-footer__content')
 			-var item = column3[i]
 			+column3(item.item, item.link)
 
-div(class="modal-promos")
+div(class="modal-promos hide" id="modalPromos")
 	div(class="modal-promos-container")
 		div(class="modal-close-container")
-			button x
+			button(id="closeModalPromos") x
 		div(class="modal-body")
 			div
 				h3 REGÍSTRATE
