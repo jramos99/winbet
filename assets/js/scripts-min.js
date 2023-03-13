@@ -51,6 +51,33 @@ var bottomNav = exports.bottomNav = function bottomNav() {
 };
 
 },{}],3:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var modal = document.getElementById("modalPromos");
+var close = document.getElementById("closeModalPromos");
+
+function closeModal() {
+    // localStorage.removeItem("modalAbierto");
+    if (localStorage.getItem("modalAbierto") != "false") {
+        modal.classList.remove("hide");
+    }
+
+    close.addEventListener("click", function (e) {
+        e.preventDefault();
+        modal.classList.add("hide");
+        localStorage.setItem("modalAbierto", false);
+    });
+    window.addEventListener("load", function () {
+        console.log("pagina cargada");
+    });
+}
+
+exports.closeModal = closeModal;
+
+},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -87,7 +114,7 @@ var tnsSingleGames = function tnsSingleGames() {
 
 exports.tnsSingleGames = tnsSingleGames;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -119,7 +146,7 @@ var topNav = exports.topNav = function topNav() {
 	myFunction();
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 var _tnsSlider = require('./components/tns-slider');
@@ -130,18 +157,21 @@ var _bottomNav = require('./components/bottomNav');
 
 var _accordion = require('./components/accordion');
 
+var _modal = require('./components/modal');
+
 (function () {
 	(0, _topNav.topNav)();
 	(0, _bottomNav.bottomNav)();
+
 	if (document.body.classList.contains('inicio')) {
 		// functions here
-
+		(0, _modal.closeModal)();
 		(0, _tnsSlider.tnsSingleGames)();
 	} else if (document.body.classList.contains('reglas')) {
 		(0, _accordion.accordionCard)();
 	}
 })();
 
-},{"./components/accordion":1,"./components/bottomNav":2,"./components/tns-slider":3,"./components/topNav":4}]},{},[5]);
+},{"./components/accordion":1,"./components/bottomNav":2,"./components/modal":3,"./components/tns-slider":4,"./components/topNav":5}]},{},[6]);
 
 //# sourceMappingURL=scripts-min.js.map
