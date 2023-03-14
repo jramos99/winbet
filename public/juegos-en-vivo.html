@@ -155,6 +155,24 @@
             </div>
           </div>
         </div>
+        <div class="login-modal-container" id="modalLogin">
+          <div class="loginModal">
+            <div class="modal-close-container">
+              <button id="closeLogin">x</button>
+            </div><img class="modal-logo" src="assets/img/WINBET-LOGO.svg" alt="logo">
+            <form class="signUp__form" name="LoginForm" action="javascript:void(0)" onsubmit="BackEndLogin(this); return false"> 
+              <div class="signUp__form--container ed-grid s-grid-1"> 
+                <label class="signUp__form--label" for="username">Nombre</label>
+                <input class="signUp__form--input" type="text" placeholder="Nombre" name="username" required>
+                <label class="signUp__form--label" for="password">Contraseña </label>
+                <input class="signUp__form--input" type="password" placeholder="Contraseña" name="password" required>
+              </div>
+              <div class="text-center mt-2"> <span name="msj_loading" id="id-login-loading"></span><small class="text-danger" name="msj_error_lg"></small></div>
+              <input class="signUp__form--button btn btn__form" type="submit" name="send" id="enviar" value="Ingresar">
+              <input type="hidden" name="BackEndUrl" value="https://apuestas.winbet.com.mx/"><a href="forgot-password.html">Olvidó su Contraseña?</a>
+            </form>
+          </div>
+        </div>
         <nav class="bottom-nav">
           <div class="bottom-nav__container">
             <ul class="bottom-nav__bar">

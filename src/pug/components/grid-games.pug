@@ -3,7 +3,7 @@ mixin gameCards(img, text, link, textLink)
 		img(src=img, alt=text, class="grid__img")
 		div(class="grid__content")
 			h3(class="grid__content--h3")= text 
-			a(href=link class="grid__content--anchore btn btn__secondary")= textLink
+			a(href=link class="grid__content--anchore btn btn__secondary openLogin")= textLink
 
 section(class="games")
 	div(class="games__container display")
@@ -21,7 +21,7 @@ section(class="games")
 					img(src=games[i].img alt=games[i].text class="grid__img")
 					div(class="grid__content")
 						h3(class="grid__content--h3")= games[i].text 
-						a(href=games[i].link class="grid__content--anchore btn btn__secondary")= games[i].textLink
+						a(href=games[i].link class="grid__content--anchore btn btn__secondary openLogin")= games[i].textLink
 
 
 

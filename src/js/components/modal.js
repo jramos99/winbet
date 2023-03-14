@@ -1,19 +1,38 @@
-const modal = document.getElementById("modalPromos");
-const close = document.getElementById("closeModalPromos");
+const modalPromos = document.getElementById("modalPromos");
+const closePromos = document.getElementById("closeModalPromos");
+
+const modalLogin = document.getElementById("modalLogin");
+const openLogin = document.querySelectorAll(".openLogin");
+const closeLogin = document.getElementById("closeLogin");
 
 function closeModal() {
     // localStorage.removeItem("modalAbierto");
     if(localStorage.getItem("modalAbierto")!="false"){
-        modal.classList.remove("hide");
+        modalPromos.classList.remove("hide");
     }
 
-    close.addEventListener("click",(e)=>{
+    closePromos.addEventListener("click",(e)=>{
         e.preventDefault();
-        modal.classList.add("hide");
+        modalPromos.classList.add("hide");
         localStorage.setItem("modalAbierto", false);
     });
 }
 
+function loginModal(){
+    for (let i = 0; i < openLogin.length; i++) {
+        openLogin[i].addEventListener('click',(e)=>{
+            e.preventDefault();
+            modalLogin.classList.add("showModalLogin");
+        })
+    }
+    closeLogin.addEventListener('click',(e)=>{
+        e.preventDefault();
+        modalLogin.classList.remove('showModalLogin');
+    })
+
+    
+}
 export{
     closeModal,
+    loginModal,
 }

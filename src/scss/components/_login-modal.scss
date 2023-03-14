@@ -1,0 +1,43 @@
+.login-modal-container{
+    display: none;
+    position: fixed;
+    top: -112px;
+    width: 100%;
+    height: calc(100% + 112px);
+    background-color: #0000003b;
+    z-index: 11;
+    align-items: center;
+    justify-content: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    .modal-close-container{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        button{
+            background-color: #fff;
+            border: 0px;
+            font-size: 30px;
+
+            &:hover{
+                color: #ED1C24;
+            }
+        }
+    }
+    .loginModal{
+        width: 100%;
+        max-width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .modal-logo{
+        max-width: 200px;
+    }
+}
+.showModalLogin{
+    display: flex;
+}

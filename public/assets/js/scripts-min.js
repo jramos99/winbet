@@ -56,23 +56,40 @@ var bottomNav = exports.bottomNav = function bottomNav() {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var modal = document.getElementById("modalPromos");
-var close = document.getElementById("closeModalPromos");
+var modalPromos = document.getElementById("modalPromos");
+var closePromos = document.getElementById("closeModalPromos");
+
+var modalLogin = document.getElementById("modalLogin");
+var openLogin = document.querySelectorAll(".openLogin");
+var closeLogin = document.getElementById("closeLogin");
 
 function closeModal() {
     // localStorage.removeItem("modalAbierto");
     if (localStorage.getItem("modalAbierto") != "false") {
-        modal.classList.remove("hide");
+        modalPromos.classList.remove("hide");
     }
 
-    close.addEventListener("click", function (e) {
+    closePromos.addEventListener("click", function (e) {
         e.preventDefault();
-        modal.classList.add("hide");
+        modalPromos.classList.add("hide");
         localStorage.setItem("modalAbierto", false);
     });
 }
 
+function loginModal() {
+    for (var i = 0; i < openLogin.length; i++) {
+        openLogin[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            modalLogin.classList.add("showModalLogin");
+        });
+    }
+    closeLogin.addEventListener('click', function (e) {
+        e.preventDefault();
+        modalLogin.classList.remove('showModalLogin');
+    });
+}
 exports.closeModal = closeModal;
+exports.loginModal = loginModal;
 
 },{}],4:[function(require,module,exports){
 'use strict';
@@ -163,6 +180,7 @@ var _modal = require('./components/modal');
 	if (document.body.classList.contains('inicio')) {
 		// functions here
 		(0, _modal.closeModal)();
+		(0, _modal.loginModal)();
 		(0, _tnsSlider.tnsSingleGames)();
 	} else if (document.body.classList.contains('reglas')) {
 		(0, _accordion.accordionCard)();

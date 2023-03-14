@@ -1,17 +1,17 @@
 .modal-promos{
-    position: absolute;
-    top: -110px;
+    position: fixed;
+    top: -112px;
     width: 100%;
     min-height: 100vh;
     background-color: #00000062;
     z-index: 10;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-left: 15px;
     padding-right: 15px;
-    height: 106%;
+    height: calc(100% + 112px);
     &-container{
-        margin-top: 50px;
         width: 100%;
         max-width: 514px;
         background-color: #fff;
