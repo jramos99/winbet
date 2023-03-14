@@ -56,25 +56,25 @@ var bottomNav = exports.bottomNav = function bottomNav() {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var modalPromos = document.getElementById("modalPromos");
-var closePromos = document.getElementById("closeModalPromos");
+/* const modalPromos = document.getElementById("modalPromos");
+const closePromos = document.getElementById("closeModalPromos"); */
 
 var modalLogin = document.getElementById("modalLogin");
 var openLogin = document.querySelectorAll(".openLogin");
 var closeLogin = document.getElementById("closeLogin");
 
-function closeModal() {
-    // localStorage.removeItem("modalAbierto");
-    if (localStorage.getItem("modalAbierto") != "false") {
-        modalPromos.classList.remove("hide");
-    }
+// function closeModal() {
+//     // localStorage.removeItem("modalAbierto");
+//     if(localStorage.getItem("modalAbierto")!="false"){
+//         modalPromos.classList.remove("hide");
+//     }
 
-    closePromos.addEventListener("click", function (e) {
-        e.preventDefault();
-        modalPromos.classList.add("hide");
-        localStorage.setItem("modalAbierto", false);
-    });
-}
+//     closePromos.addEventListener("click",(e)=>{
+//         e.preventDefault();
+//         modalPromos.classList.add("hide");
+//         localStorage.setItem("modalAbierto", false);
+//     });
+// }
 
 function loginModal() {
     for (var i = 0; i < openLogin.length; i++) {
@@ -88,7 +88,6 @@ function loginModal() {
         modalLogin.classList.remove('showModalLogin');
     });
 }
-exports.closeModal = closeModal;
 exports.loginModal = loginModal;
 
 },{}],4:[function(require,module,exports){
@@ -179,13 +178,14 @@ var _modal = require('./components/modal');
 
 	if (document.body.classList.contains('inicio')) {
 		// functions here
-		(0, _modal.closeModal)();
+		// closeModal();
 		(0, _modal.loginModal)();
 		(0, _tnsSlider.tnsSingleGames)();
 	} else if (document.body.classList.contains('reglas')) {
 		(0, _accordion.accordionCard)();
 	}
 })();
+// import { closeModal, loginModal } from './components/modal';
 
 },{"./components/accordion":1,"./components/bottomNav":2,"./components/modal":3,"./components/tns-slider":4,"./components/topNav":5}]},{},[6]);
 
