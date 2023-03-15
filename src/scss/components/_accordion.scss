@@ -1,17 +1,19 @@
 .rules {
-	background: transparent linear-gradient(90deg, #00013B 0%, #203C71 20%, #2B2F88 51%, #203C71 79%, #00013B 100%) 0% 0% no-repeat padding-box;
+	background-image: url(../../assets/img/Background_cards_Winbet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 	margin-bottom: 0;
 	width: 100%;
 }
 
 .background-img {
-	background-image: url(../../assets/img/background-rules.png);
+	background-image: url(../../assets/img/Image_Rules_1.png);
     background-repeat: no-repeat;
     background-size: contain;
 	background-position-x: center;
 	height: 200px;
 	margin: 0 auto;
-	max-width: 1280px;
+	max-width: 820px;
 	width: 100%;
 
 	@include from(l) {
