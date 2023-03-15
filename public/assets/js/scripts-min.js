@@ -96,7 +96,32 @@ exports.loginModal = loginModal;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-
+var tnsSingleBanner = function tnsSingleBanner() {
+	var slider = tns({
+		container: '#tnsSingleBanner',
+		items: 1,
+		slideBy: 1,
+		speed: 1000,
+		nav: false,
+		mode: 'gallery',
+		mouseDrag: true,
+		autoplay: true,
+		autoplayButtonOutput: false,
+		edgePadding: "50px",
+		controlsText: ['<i role="button" class="fas fa-chevron-left"></i>', '<i role="button" class="fas fa-chevron-right"></i>'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			640: {
+				items: 1
+			},
+			960: {
+				items: 1
+			}
+		}
+	});
+};
 
 var tnsSingleGames = function tnsSingleGames() {
 	var slider = tns({
@@ -126,6 +151,7 @@ var tnsSingleGames = function tnsSingleGames() {
 };
 
 exports.tnsSingleGames = tnsSingleGames;
+exports.tnsSingleBanner = tnsSingleBanner;
 
 },{}],5:[function(require,module,exports){
 'use strict';
@@ -181,6 +207,7 @@ var _modal = require('./components/modal');
 		// closeModal();
 		(0, _modal.loginModal)();
 		(0, _tnsSlider.tnsSingleGames)();
+		(0, _tnsSlider.tnsSingleBanner)();
 	} else if (document.body.classList.contains('reglas')) {
 		(0, _accordion.accordionCard)();
 	}

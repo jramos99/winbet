@@ -1,4 +1,4 @@
-import {tnsSingleGames} from './components/tns-slider';
+import {tnsSingleGames, tnsSingleBanner} from './components/tns-slider';
 import {topNav} from './components/topNav';
 import {bottomNav} from './components/bottomNav';
 import {accordionCard} from './components/accordion';
@@ -14,6 +14,7 @@ import {loginModal } from './components/modal';
 		// closeModal();
 		loginModal();
 		tnsSingleGames();
+		tnsSingleBanner();
 	}else if (document.body.classList.contains('reglas')) {
 		accordionCard();
 	}

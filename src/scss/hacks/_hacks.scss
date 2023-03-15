@@ -126,7 +126,24 @@ img {
 		display: block;
 	}
 }
+.display-menu{
+	display: none;
 
+	@include from(504px) {
+		display: block;
+		margin-right: 10px;
+	}
+	@include from(1024px) {
+		display: none;
+	}
+}
+.display-menu-footer{
+	display: block;
+
+	@include from(504px) {
+		display: none;
+	}
+}
 .block {
 	// display: block;
 	

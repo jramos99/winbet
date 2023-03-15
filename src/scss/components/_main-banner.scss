@@ -14,6 +14,17 @@
         }
     }
     &-main-container{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-flow: wrap-reverse;
+        padding-left: 15px;
+        padding-right: 15px;
+        justify-content: center;
+        @include from(922px){
+            align-items: center;
+        }
+    }
+    .card-banner{
         display: flex;
         flex-wrap: wrap;
         flex-flow: wrap-reverse;
