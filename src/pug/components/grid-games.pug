@@ -1,9 +1,9 @@
 mixin gameCards(img, text, link, textLink)
-	div(class="grid__card")
+	div(class="grid__card openLogin")
 		img(src=img, alt=text, class="grid__img")
 		div(class="grid__content")
 			h3(class="grid__content--h3")= text 
-			span(class="grid__content--anchore btn btn__secondary openLogin")= textLink
+			span(class="grid__content--anchore btn btn__secondary")= textLink
 
 section(class="games")
 	div(class="games__container display")

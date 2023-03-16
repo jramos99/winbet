@@ -60,7 +60,8 @@ Object.defineProperty(exports, "__esModule", {
 const closePromos = document.getElementById("closeModalPromos"); */
 
 var modalLogin = document.getElementById("modalLogin");
-var openLogin = document.querySelectorAll(".openLogin");
+var openLogin = document.querySelectorAll("#tnsSingleGames");
+var openLoginDesk = document.querySelectorAll(".openLogin");
 var closeLogin = document.getElementById("closeLogin");
 
 // function closeModal() {
@@ -77,8 +78,12 @@ var closeLogin = document.getElementById("closeLogin");
 // }
 
 function loginModal() {
-    for (var i = 0; i < openLogin.length; i++) {
-        openLogin[i].addEventListener('click', function (e) {
+    openLogin[0].addEventListener('click', function (e) {
+        e.preventDefault();
+        modalLogin.classList.add("showModalLogin");
+    });
+    for (var i = 0; i < openLoginDesk.length; i++) {
+        openLoginDesk[i].addEventListener('click', function (e) {
             e.preventDefault();
             modalLogin.classList.add("showModalLogin");
         });

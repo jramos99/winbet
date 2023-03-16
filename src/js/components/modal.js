@@ -2,7 +2,8 @@
 const closePromos = document.getElementById("closeModalPromos"); */
 
 const modalLogin = document.getElementById("modalLogin");
-const openLogin = document.querySelectorAll(".openLogin");
+const openLogin = document.querySelectorAll("#tnsSingleGames");
+const openLoginDesk = document.querySelectorAll(".openLogin");
 const closeLogin = document.getElementById("closeLogin");
 
 // function closeModal() {
@@ -19,8 +20,12 @@ const closeLogin = document.getElementById("closeLogin");
 // }
 
 function loginModal(){
-    for (let i = 0; i < openLogin.length; i++) {
-        openLogin[i].addEventListener('click',(e)=>{
+    openLogin[0].addEventListener('click',(e)=>{
+        e.preventDefault();
+        modalLogin.classList.add("showModalLogin");
+    })
+    for (let i = 0; i < openLoginDesk.length; i++) {
+        openLoginDesk[i].addEventListener('click',(e)=>{
             e.preventDefault();
             modalLogin.classList.add("showModalLogin");
         })
