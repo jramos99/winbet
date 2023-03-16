@@ -37,6 +37,7 @@
     }
     &-button{
         color: #fff;
+        text-align: center;
         h2{
             font-size: 50px;
             margin-bottom: 0px;
@@ -44,6 +45,9 @@
         }
         h3{
             font-size: 24px;
+        }
+        @include from(375px){
+            text-align: start;
         }
         @include from(922px){
             width: 50%;
