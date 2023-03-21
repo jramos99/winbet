@@ -51,51 +51,6 @@ var bottomNav = exports.bottomNav = function bottomNav() {
 };
 
 },{}],3:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-/* const modalPromos = document.getElementById("modalPromos");
-const closePromos = document.getElementById("closeModalPromos"); */
-
-var modalLogin = document.getElementById("modalLogin");
-var openLogin = document.querySelectorAll("#tnsSingleGames");
-var openLoginDesk = document.querySelectorAll(".openLogin");
-var closeLogin = document.getElementById("closeLogin");
-
-// function closeModal() {
-//     // localStorage.removeItem("modalAbierto");
-//     if(localStorage.getItem("modalAbierto")!="false"){
-//         modalPromos.classList.remove("hide");
-//     }
-
-//     closePromos.addEventListener("click",(e)=>{
-//         e.preventDefault();
-//         modalPromos.classList.add("hide");
-//         localStorage.setItem("modalAbierto", false);
-//     });
-// }
-
-function loginModal() {
-    openLogin[0].addEventListener('click', function (e) {
-        e.preventDefault();
-        modalLogin.classList.add("showModalLogin");
-    });
-    for (var i = 0; i < openLoginDesk.length; i++) {
-        openLoginDesk[i].addEventListener('click', function (e) {
-            e.preventDefault();
-            modalLogin.classList.add("showModalLogin");
-        });
-    }
-    closeLogin.addEventListener('click', function (e) {
-        e.preventDefault();
-        modalLogin.classList.remove('showModalLogin');
-    });
-}
-exports.loginModal = loginModal;
-
-},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -158,7 +113,7 @@ var tnsSingleGames = function tnsSingleGames() {
 exports.tnsSingleGames = tnsSingleGames;
 exports.tnsSingleBanner = tnsSingleBanner;
 
-},{}],5:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -190,7 +145,7 @@ var topNav = exports.topNav = function topNav() {
 	myFunction();
 };
 
-},{}],6:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 var _tnsSlider = require('./components/tns-slider');
@@ -201,24 +156,19 @@ var _bottomNav = require('./components/bottomNav');
 
 var _accordion = require('./components/accordion');
 
-var _modal = require('./components/modal');
-
 (function () {
 	(0, _topNav.topNav)();
 	(0, _bottomNav.bottomNav)();
 
 	if (document.body.classList.contains('inicio')) {
 		// functions here
-		// closeModal();
-		(0, _modal.loginModal)();
 		(0, _tnsSlider.tnsSingleGames)();
 		(0, _tnsSlider.tnsSingleBanner)();
 	} else if (document.body.classList.contains('reglas')) {
 		(0, _accordion.accordionCard)();
 	}
 })();
-// import { closeModal, loginModal } from './components/modal';
 
-},{"./components/accordion":1,"./components/bottomNav":2,"./components/modal":3,"./components/tns-slider":4,"./components/topNav":5}]},{},[6]);
+},{"./components/accordion":1,"./components/bottomNav":2,"./components/tns-slider":3,"./components/topNav":4}]},{},[5]);
 
 //# sourceMappingURL=scripts-min.js.map
