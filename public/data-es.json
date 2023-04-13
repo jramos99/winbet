@@ -230,6 +230,14 @@
 		{
 			"item": "Caballos en vivo",
 			"link": "racebook.html"
+		},
+		{
+			"item": "Politica de Privacidad",
+			"link": "politica.html"
+		},
+		{
+			"item": "Terminos y Condiciones",
+			"link": "terminos.html"
 		}
 	],
 	"column3": [
