@@ -2,6 +2,7 @@ import {tnsSingleGames, tnsSingleBanner} from './components/tns-slider';
 import {topNav} from './components/topNav';
 import {bottomNav} from './components/bottomNav';
 import {accordionCard} from './components/accordion';
+import { closeModal } from './components/modal';
 
 (()=>{
 	topNav();
@@ -9,6 +10,7 @@ import {accordionCard} from './components/accordion';
 	
 	if (document.body.classList.contains('inicio')) {	
 		// functions here
+		closeModal();
 		tnsSingleGames();
 		tnsSingleBanner();
 	}else if (document.body.classList.contains('reglas')) {
