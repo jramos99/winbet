@@ -112,37 +112,37 @@
 		{
 			"img": "assets/img/Card_1.png",
 			"text": "deporte",
-			"link": "iniciar-sesion.html",
+			"link": "deportes.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
 			"img": "assets/img/Card_2.png",
 			"text": "casino",
-			"link": "iniciar-sesion.html",
+			"link": "casino.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
 			"img": "assets/img/Card_3.png",
 			"text": "casino en vivo",
-			"link": "iniciar-sesion.html",
+			"link": "casino.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
 			"img": "assets/img/Card_4.png",
 			"text": "racebook",
-			"link": "iniciar-sesion.html",
+			"link": "racebook.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
 			"img": "assets/img/Card_5.png",
 			"text": "apuestas en vivo",
-			"link": "iniciar-sesion.html",
+			"link": "apuestas-en-vivo.html",
 			"textLink": "Ingresar ahora"
 		},
 		{
 			"img": "assets/img/Card_6.png",
 			"text": "crear propuesta",
-			"link": "iniciar-sesion.html",
+			"link": "apuestas-en-vivo.html",
 			"textLink": "Ingresar ahora"
 		}
 	],
@@ -230,6 +230,14 @@
 		{
 			"item": "Caballos en vivo",
 			"link": "racebook.html"
+		},
+		{
+			"item": "Politica de Privacidad",
+			"link": "politica.html"
+		},
+		{
+			"item": "Terminos y Condiciones",
+			"link": "terminos.html"
 		}
 	],
 	"column3": [

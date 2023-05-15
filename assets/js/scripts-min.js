@@ -56,39 +56,41 @@ var bottomNav = exports.bottomNav = function bottomNav() {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-/* const modalPromos = document.getElementById("modalPromos");
-const closePromos = document.getElementById("closeModalPromos"); */
+var modalPromos = document.getElementById("modalPromos");
+var closePromos = document.getElementById("closeModalPromos");
 
-var modalLogin = document.getElementById("modalLogin");
-var openLogin = document.querySelectorAll(".openLogin");
-var closeLogin = document.getElementById("closeLogin");
+// const modalLogin = document.getElementById("modalLogin");
+// const openLogin = document.querySelectorAll(".openLogin");
+// const closeLogin = document.getElementById("closeLogin");
 
-// function closeModal() {
-//     // localStorage.removeItem("modalAbierto");
-//     if(localStorage.getItem("modalAbierto")!="false"){
-//         modalPromos.classList.remove("hide");
-//     }
-
-//     closePromos.addEventListener("click",(e)=>{
-//         e.preventDefault();
-//         modalPromos.classList.add("hide");
-//         localStorage.setItem("modalAbierto", false);
-//     });
-// }
-
-function loginModal() {
-    for (var i = 0; i < openLogin.length; i++) {
-        openLogin[i].addEventListener('click', function (e) {
-            e.preventDefault();
-            modalLogin.classList.add("showModalLogin");
-        });
+function closeModal() {
+    // localStorage.removeItem("modalAbierto");
+    if (localStorage.getItem("modalAbierto") != "false") {
+        modalPromos.classList.remove("hide");
     }
-    closeLogin.addEventListener('click', function (e) {
+
+    closePromos.addEventListener("click", function (e) {
         e.preventDefault();
-        modalLogin.classList.remove('showModalLogin');
+        modalPromos.classList.add("hide");
+        localStorage.setItem("modalAbierto", false);
     });
 }
-exports.loginModal = loginModal;
+
+/* function loginModal(){
+    for (let i = 0; i < openLogin.length; i++) {
+        openLogin[i].addEventListener('click',(e)=>{
+            e.preventDefault();
+            modalLogin.classList.add("showModalLogin");
+        })
+    }
+    closeLogin.addEventListener('click',(e)=>{
+        e.preventDefault();
+        modalLogin.classList.remove('showModalLogin');
+    })
+
+    
+} */
+exports.closeModal = closeModal;
 
 },{}],4:[function(require,module,exports){
 'use strict';
@@ -204,15 +206,13 @@ var _modal = require('./components/modal');
 
 	if (document.body.classList.contains('inicio')) {
 		// functions here
-		// closeModal();
-		(0, _modal.loginModal)();
+		(0, _modal.closeModal)();
 		(0, _tnsSlider.tnsSingleGames)();
 		(0, _tnsSlider.tnsSingleBanner)();
 	} else if (document.body.classList.contains('reglas')) {
 		(0, _accordion.accordionCard)();
 	}
 })();
-// import { closeModal, loginModal } from './components/modal';
 
 },{"./components/accordion":1,"./components/bottomNav":2,"./components/modal":3,"./components/tns-slider":4,"./components/topNav":5}]},{},[6]);
 
